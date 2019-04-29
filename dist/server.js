@@ -7,6 +7,8 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const morgan_1 = __importDefault(require("morgan"));
+if (process.env.NODE_ENV !== "production")
+    require('dotenv').config();
 //* Importing Routes
 const eventsRoutes_1 = __importDefault(require("./routes/eventsRoutes"));
 class Server {

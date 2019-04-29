@@ -8,12 +8,7 @@ class EventsValidators extends Helpers {
       const eventName: string = req.body.eventName;
 
       if(eventName === "") {
-        let newError =  {
-          message: "Invalid Name", 
-          status: 404, 
-        };
-        
-        throw this.setError(newError);
+        throw this.setError("Invalid Name", 401);
       }
   
       next();

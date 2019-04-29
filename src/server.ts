@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
+if(process.env.NODE_ENV !== "production") require('dotenv').config()
+
 
 //* Importing Routes
 import eventsRoutes from './routes/eventsRoutes';
